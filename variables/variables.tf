@@ -29,7 +29,7 @@ variable "port" {
 
 variable "protocol" {
   type        = string
-  default     = "protocol"
+  default     = "tcp"
 }
 
 
