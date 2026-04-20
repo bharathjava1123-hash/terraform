@@ -1,7 +1,7 @@
 resource "aws_instance" "expense" {
     count = length(var.instance_names)
     ami = data.aws_ami.web.id
-    instance_type = locals.instance_type
+    instance_type = local.instance_type
     vpc_security_group_ids = [aws_security_group.allow_ssh_terraform.id]
     tags = merge(
         var.common_tags,
